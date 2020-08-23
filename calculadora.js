@@ -9,3 +9,7 @@ var seis=document.getElementById("6");
 var siete=document.getElementById("7");
 var ocho=document.getElementById("8");
 var nueve=document.getElementById("9");
+var reset=document.getElementById("reiniciar")
+var punto=document.getElementById(".");
+var division=document.getElementById("Division");
+var multiplicacion=document.getElementById("Multiplicacion");
