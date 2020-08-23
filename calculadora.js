@@ -1,3 +1,6 @@
+var num1;
+var num2;
+var signo;
 function init(){
   var barra=document.getElementById("barra");
   var cero=document.getElementById("0");
@@ -11,39 +14,94 @@ function init(){
   var ocho=document.getElementById("8");
   var nueve=document.getElementById("9");
   var reset=document.getElementById("reiniciar")
-  var punto=document.getElementById(".");
+  var igual=document.getElementById("igual");
   var division=document.getElementById("Division");
   var multiplicacion=document.getElementById("Multiplicacion");
   var suma=document.getElementById("Suma");
   var resta=document.getElementById("Resta");
 
-  cero.onClick = function(e){
+  cero.onclick = function(e){
     barra.textContent = barra.textContent + "0";
   }
-  uno.onClick = function(e){
+  uno.onclick = function(e){
     barra.textContent = barra.textContent + "1";
   }
-  dos.onClick = function(e){
+  dos.onclick = function(e){
     barra.textContent = barra.textContent + "2";
   }
-  tres.onClick = function(e){
+  tres.onclick = function(e){
     barra.textContent = barra.textContent + "3";
   }
-  cuatro.onClick = function(e){
+  cuatro.onclick = function(e){
     barra.textContent = barra.textContent + "4";
   }
-  cinco.onClick = function(e){
+  cinco.onclick = function(e){
     barra.textContent = barra.textContent + "5";
   }
-  seis.onClick = function(e){
+  seis.onclick = function(e){
     barra.textContent = barra.textContent + "6";
   }
-  siete.onClick = function(e){
+  siete.onclick = function(e){
     barra.textContent = barra.textContent + "7";
   }
-  ocho.onClick = function(e){
+  ocho.onclick = function(e){
     barra.textContent = barra.textContent + "8";
   }
-  nueve.onClick = function(e){
+  nueve.onclick = function(e){
     barra.textContent = barra.textContent + "9";
   }
+  reset.onclick = function(e){
+    reseteo();
+  }
+  suma.onclick = function(e){
+    num1 = barra.textContent;
+    signo = "+";
+    limpiar();
+  }
+  resta.onclick = function(e){
+    num1 = barra.textContent;
+    signo = "-";
+    limpiar()
+  }
+  multiplicacion.onclick = function(e){
+    num1 = barra.textContent;
+    signo = "*";
+    limpiar()
+  }
+  division.onclick = function(e){
+    num1 = barra.textContent;
+    signo = "/"
+    limpiar()
+  }
+  igual.onclick = function(e){
+    num2 = barra.textContent;
+    operacion();
+  }
+  function reseteo(){
+     barra.textContent = "";
+    num1 = 0;
+    num2 = 0;
+  }
+  function limpiar(){
+  barra.textContent = "";
+  }
+  function operacion(){
+    var respuesta=0;
+    switch (signo) {
+      case "+":
+          respuesta = parseFloat(num1) + parseFloat(num2);
+        break;
+      case "-":
+          respuesta = parseFloat(num1) - parseFloat(num2);
+        break;
+      case "*":
+        respuesta = parseFloat(num1) * parseFloat(num2);
+      break;
+      case "/":
+        respuesta = parseFloat(num1) / parseFloat(num2);
+        break;
+    }
+    reseteo();
+    barra.textContent = respuesta
+  }
+}

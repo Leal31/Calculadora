@@ -2,36 +2,32 @@
 <html>
 	<head>
 		<title>Calculadora</title>
-		<style>
-		button {
-		height:50px;
-		width:50px;
-		border-color:#030302;
-		background-color:lightgreen;
-		}
-		span {
-		height:250px;
-		width:50px;
-		}
-		</style>
+		<link type="text/css" href="estilo.css" rel="stylesheet">
 	</head>
-	<body>
-	<table>
-	<tr>
-	<td colspan=4>
-	<span  id="barra"></span>
-	</td>
-	</tr>
-	<tr>
-	<td><button id="7">7</button><button id="8">8</button><button id="9">9</button><button id="Division">/</button>
-	</td></tr>
-	<tr><td><button id="4">4</button><button id="5">5</button><button id="6">6</button><button id="Multiplicacion">X</button>
-	</td></tr>
-	<tr><td><button id="1">1</button><button id="2">2</button><button id="3">3</button><button id="Resta">-</button>
-	</td></tr>
-	<tr><td><button id="reiniciar">C</button><button id="0">0</button><button id=".">.</button><button id="Suma">+</button>
-	</td></tr>
-	</table>
-	<script src="calculadora.js></script>
+	<body onload="init();">
+		<table class="Calculadora" align ="center">
+			<tr>
+				<td colspan=4>
+					<span id="barra"></span>
+				</td>
+			</tr>
+			<tr>
+				<td><button id="7">7</button><button id="8">8</button><button id="9">9</button><button id="Division">/</button>
+				</td>
+			</tr>
+			<tr>
+				<td><button id="4">4</button><button id="5">5</button><button id="6">6</button><button id="Multiplicacion">X</button>
+				</td>
+			</tr>
+			<tr>
+				<td><button id="1">1</button><button id="2">2</button><button id="3">3</button><button id="Resta">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td><button id="reiniciar">C</button><button id="0">0</button><button id="igual">=</button><button id="Suma">+</button>
+				</td>
+			</tr>
+		</table>
+		<script src="calculadora.js"></script>
 	</body>
-	</html>
+</html>
