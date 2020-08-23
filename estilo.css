@@ -17,11 +17,12 @@
 #barra {
   display: block;
   text-align: center;
-  font-size: center;
+  font-size: 30px;
   margin-bottom: 25px;
   background-color: gray;
   line-height: 100px;
   border-radius: 25px;
   width:400px;
   height: 70px;
+  color:#3EC607;
 }
