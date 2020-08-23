@@ -1,7 +1,10 @@
+//Variables principales a usar 
 var num1;
 var num2;
 var signo;
+//funcion init para que de inicio al proceso posterior
 function init(){
+  //traemos cada elemento del archivo html
   var barra=document.getElementById("barra");
   var cero=document.getElementById("0");
   var uno=document.getElementById("1");
@@ -19,7 +22,7 @@ function init(){
   var multiplicacion=document.getElementById("Multiplicacion");
   var suma=document.getElementById("Suma");
   var resta=document.getElementById("Resta");
-
+  //los hago interactivos
   cero.onclick = function(e){
     barra.textContent = barra.textContent + "0";
   }
@@ -77,6 +80,7 @@ function init(){
     num2 = barra.textContent;
     operacion();
   }
+  //hago las funciones anteriormente llamadas como limpiar y reseteo
   function reseteo(){
      barra.textContent = "";
     num1 = 0;
@@ -85,6 +89,7 @@ function init(){
   function limpiar(){
   barra.textContent = "";
   }
+  //hago la funcion operacion la cual hara que suelte el resultado final al dar click en el boton igual
   function operacion(){
     var respuesta=0;
     switch (signo) {
